@@ -3,24 +3,28 @@
 # 🚀 Test Automation Framework
 
 ## 📌 Table of Contents
-- [📋 Prerequisites](#prerequisites)
-- [🔧 Project Setup](#project-setup)
-- [🚀 Running Tests](#running-tests)
-- [⚙️ Configurations](#configurations)
-- [📊 Reports](#reports)
-- [❓ Troubleshooting](#troubleshooting)
-- [📜 License](#license)
+- [📋 Prerequisites](#-prerequisites)
+- [🔧 Project Setup](#-project-setup)
+- [🚀 Running Tests](#-running-tests)
+- [⚙️ Configurations](#-configurations)
+- [📊 Reports](#-reports)
+- [❓ Troubleshooting](#-troubleshooting)
+- [📜 License](#-license)
 
 ---
 
 ## 📋 Prerequisites
 
-Before setting up the project, ensure you have the following installed:
-- **Java** (Version: `11.0.0` or later) ➜ [Download Java](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
-- **Maven** (Version: `3.x`) ➜ [Download Maven](https://maven.apache.org/download.cgi)
-- **Node.js** [Download Node.js](https://nodejs.org/)
+As step-1, first download or clone the Sample-Nimble-Client Project from the git repository https://github.com/ViomTech/Sample-Nimble-Client.
 
-To check installations, run:
+To install the pre-requisites of **Nimble-W / Nimble-M / Nimble-Cross**, follow the below steps -
+- **MAC/Linux/Unix OS** 
+  - **Nimble-Cross / Nimble-M:** Run nimble_mobile_setup_mac.sh script, located in the root folder of Sample-Nimble-Client Project.
+  - **Nimble-Cross / Nimble-W:** Run nimble_web_setup_mac.sh script, located in the root folder of Sample-Nimble-Client Project. (Nimble-W)
+- **Windows OS** 
+  - Run nimble_mobile_setup_windows.bat script, located in the root folder of Sample-Nimble-Client Project.
+
+Follow the instructions on the screen for successfull installations and verification of the installations.
 ```sh
 java -version
 mvn -version
@@ -30,23 +34,27 @@ node -v # (if required)
 ---
 
 ## 🔧 Project Setup
-###Clone the repository and install dependencies:
+
+- Download the Nimble from www.viom.tech. 
+- The artifact will be in .zip format, unzip it.
+- Run the below command to install the nimble in .M2 folder of the machine.
+- Make sure 
+  - the location and name of the jar file in -Dfile argument is correct
+  - -Dversion is correct
 ```sh
-git clone <GIT_REPOSITORY_URL>
-cd <PROJECT_NAME>
-mvn clean install
+
+mvn install:install-file \
+  -Dfile=/Users/amitgupta/Viom/Products/Sample-Nimble-Client/libs/tech/viom/nimble/1.0.0/nimble-1.0.0.jar \
+  -DgroupId=tech.viom \
+  -DartifactId=nimble \
+  -Dversion=1.0.0 \
+  -Dpackaging=jar
+
 ```
-###Install Playwright:
-```sh
-npx playwright install
-```
-###Install the VS2015 runtime (Only for Windows)
-```sh
-https://www.microsoft.com/en-in/download/details.aspx?id=48145
-```
+
 ---
 
-## 🚀 Running Tests
+## 🚀 Running Feature files in Sample-Nimble-Client
 ### ✅ Run all tests for a web app and on specific browser and a specific tag
 ```sh
 mvn clean test -Dcucumber.features=src/test/java/com/client/feature  -Dplatform=web -Dplatform.name=chrome -Durl=https://www.emirates.com/ae/english/

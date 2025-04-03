@@ -23,3 +23,10 @@
 hs_err_pid*
 replay_pid*
 /target/
+/libs/
+
+
+# idea and eclipse files
+.idea/
+.project
+.DS_Store/

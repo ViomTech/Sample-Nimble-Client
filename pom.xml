@@ -5,19 +5,11 @@
 	<groupId>com.client.sample</groupId>
 	<artifactId>Sample-Nimble-Client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<repositories>
-		<repository>
-			<id>my-local-repo</id>
-			<url>file://${project.basedir}/libs</url>
-		</repository>
-	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>tech.viom</groupId>
 			<artifactId>nimble</artifactId>
 			<version>1.0.0</version>
-			<!--<scope>system</scope>
-			<systemPath>${project.basedir}/libs/nimble-1.0.0.jar</systemPath>-->
 		</dependency>
 	</dependencies>
 	<build>
