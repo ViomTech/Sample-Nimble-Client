@@ -7,7 +7,7 @@ echo "Checking and installing required tools..."
 JAVA_VERSION=11
 NODE_VERSION=20
 MAVEN_VERSION=3.9.6
-APPIUM_VERSION=2.5.1
+APPIUM_VERSION=2.5.4
 JAVA_URL="https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20%2B8/OpenJDK11U-jdk_x64_mac_hotspot_11.0.20_8.tar.gz"
 MAVEN_URL="https://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz"
 TEMP_DIR="/tmp/appium_setup"
@@ -24,7 +24,7 @@ if [ ! -x "$SCRIPT_PATH" ]; then
         echo "Failed to make script executable. Please run 'chmod +x $SCRIPT_PATH' manually and re-run."
         exit 1
     fi
-    echo "Script permissions updated. For this run, execute again with './setup_appium_java.sh'."
+    echo "Script permissions updated. For this run, execute again with './nimble_mobile_setup_mac.sh'."
 fi
 
 # Create temp directory
@@ -44,6 +44,10 @@ if ! command -v brew >/dev/null 2>&1; then
 else
     echo "Homebrew is already installed."
 fi
+
+# 🛠️ Ensure npm global bin path (Appium) is in PATH
+echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 
 # 2. Check and Install JDK 11
 echo "Checking for Java JDK $JAVA_VERSION..."
@@ -125,39 +129,123 @@ if ! appium --version >/dev/null 2>&1; then
     fi
     echo "Appium installed."
 else
-    echo "Appium is already installed."
+    echo "Appium is already installed. Checking version..."
+    INSTALLED_VERSION=$(appium --version)
+    if [ "$INSTALLED_VERSION" != "$APPIUM_VERSION" ]; then
+        echo "Installed Appium version ($INSTALLED_VERSION) does not match required version ($APPIUM_VERSION). Updating..."
+        npm uninstall -g appium
+        npm install -g appium@$APPIUM_VERSION
+        if [ $? -ne 0 ]; then
+            echo "Failed to update Appium. Install manually with 'npm install -g appium@$APPIUM_VERSION'."
+            exit 1
+        fi
+        echo "Appium updated to $APPIUM_VERSION."
+    else
+        echo "Appium $APPIUM_VERSION is already installed."
+    fi
 fi
 
-# 6. Install Appium Drivers
-echo "Installing Appium drivers for iOS and Android..."
-appium driver install xcuitest
-if [ $? -ne 0 ]; then
-    echo "Failed to install XCUITest driver. Run 'appium driver install xcuitest' manually."
-    exit 1
+# 6. Install or Update Appium Drivers
+echo "Checking and installing/updating Appium drivers for iOS and Android..."
+
+# Function to check if a driver is installed using awk
+#check_driver_installed() {
+#    local driver_name="$1"
+#    # Use awk to match lines with "- <driver_name>@" and return 0 if found, 1 if not
+#    appium driver list --installed | awk '/- '"$driver_name"'@/ {found=1; exit 0} END {if (!found) exit 1}'
+#    return $?
+#}
+# Helper function to check installed drivers using JSON output
+check_driver_installed() {
+    local driver_name="$1"
+    appium driver list --installed --json | grep -q ""$driver_name""
+}
+
+# Install or update XCUITest driver
+echo "Checking XCUITest driver..."
+if check_driver_installed "xcuitest"; then
+    echo "XCUITest driver is already installed. Skipping install..."
+    appium driver update xcuitest
+    if [ $? -ne 0 ]; then
+        echo "Failed to update XCUITest driver. Run 'appium driver update xcuitest' manually."
+        exit 1
+    fi
+    echo "XCUITest driver updated."
+else
+    echo "XCUITest driver not found. Installing..."
+    appium driver install xcuitest
+    if [ $? -ne 0 ]; then
+        echo "Failed to install XCUITest driver. Run 'appium driver install xcuitest' manually."
+        exit 1
+    fi
+    echo "XCUITest driver installed."
 fi
-appium driver install uiautomator2
-if [ $? -ne 0 ]; then
-    echo "Failed to install UiAutomator2 driver. Run 'appium driver install uiautomator2' manually."
-    exit 1
+
+# Install or update UiAutomator2 driver
+echo "Checking UiAutomator2 driver..."
+if check_driver_installed "uiautomator2"; then
+    echo "UiAutomator2 driver is already installed. Updating..."
+    appium driver update uiautomator2
+    if [ $? -ne 0 ]; then
+        echo "Failed to update UiAutomator2 driver. Run 'appium driver update uiautomator2' manually."
+        exit 1
+    fi
+    echo "UiAutomator2 driver updated."
+else
+    echo "UiAutomator2 driver not found. Installing..."
+    appium driver install uiautomator2
+    if [ $? -ne 0 ]; then
+        echo "Failed to install UiAutomator2 driver. Run 'appium driver install uiautomator2' manually."
+        exit 1
+    fi
+    echo "UiAutomator2 driver installed."
 fi
-echo "XCUITest and UiAutomator2 drivers installed."
 
 # 7. Check and Install Xcode
 echo "Checking for Xcode..."
+XCODE_PATH="/Applications/Xcode.app/Contents/Developer"
 if ! xcode-select -p >/dev/null 2>&1; then
     echo "Xcode command-line tools not found. Installing..."
     xcode-select --install
     if [ $? -ne 0 ]; then
-        echo "Failed to install Xcode command-line tools. Install Xcode from App Store and run 'xcode-select --install'."
+        echo "Failed to install Xcode command-line tools. Install Xcode from App Store and run 'xcode-select --install' manually."
         exit 1
     fi
     echo "Xcode command-line tools installed."
 else
     echo "Xcode command-line tools are already installed."
 fi
-if ! xcrun simctl list devices >/dev/null 2>&1; then
-    echo "Xcode not fully installed. Please install Xcode from the App Store."
-    exit 1
+
+# Check for full Xcode installation
+if [ ! -d "$XCODE_PATH" ] || ! xcrun simctl list devices >/dev/null 2>&1; then
+    echo "Full Xcode installation not detected or simulators unavailable."
+    echo "The full Xcode IDE (including iOS simulators) is required for Appium iOS testing."
+    echo "Please follow these steps:"
+    echo "1. Open the App Store (or visit https://developer.apple.com/download/all/)."
+    echo "2. Search for 'Xcode' and install the latest version (e.g., Xcode 15.x)."
+    echo "3. After installation, open Xcode to complete setup (agree to terms, install additional components)."
+    echo "4. Run 'xcode-select --switch /Applications/Xcode.app/Contents/Developer' to set the path."
+    echo "Opening App Store now..."
+    open -a "App Store" "macappstore://apps.apple.com/app/xcode/id497799835"
+
+    # Wait for Xcode to be installed
+    echo "Waiting for Xcode installation. Press Enter once Xcode is installed and opened at least once..."
+    read -p "Press Enter to continue..."
+
+    # Re-check after user input
+    if [ ! -d "$XCODE_PATH" ] || ! xcrun simctl list devices >/dev/null 2>&1; then
+        echo "Xcode still not fully installed or simulators unavailable. Please ensure Xcode is installed and run again."
+        exit 1
+    fi
+    echo "Xcode installation verified."
+else
+    echo "Full Xcode installation detected with simulators available."
+fi
+
+# Ensure xcode-select points to the full Xcode path
+if [ -d "$XCODE_PATH" ]; then
+    sudo xcode-select --switch "$XCODE_PATH"
+    echo "xcode-select path set to $XCODE_PATH."
 fi
 
 # 8. Check and Install Android Studio
@@ -177,6 +265,13 @@ if ! command -v adb >/dev/null 2>&1; then
 else
     echo "Android SDK is already installed."
 fi
+
+# Force export ANDROID_HOME again in current session
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
+echo "ANDROID_HOME and PATH updated."
+
+
 
 # 9. Create Sample Appium Project
 echo "Setting up a sample Appium Java project..."
