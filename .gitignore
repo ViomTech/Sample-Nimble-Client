@@ -30,3 +30,7 @@ replay_pid*
 .idea/
 .project
 .DS_Store/
+.classpath
+.DS_Store
+.settings
+

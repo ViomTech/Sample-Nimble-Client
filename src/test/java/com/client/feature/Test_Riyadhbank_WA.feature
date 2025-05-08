@@ -10,4 +10,13 @@ Scenario: "IBAN Validation"
   And wait 2 secs
   And click "e.g. 123456789" inside input with class "ibanAccountNumber"
   And enter "0000608010167519"
+  And click "Choose a Bank"
+  And click "ARAB NATIONAL BANK"
+  And wait 2 secs
+  And click on the element with id as "_com_rb_iban_generator_web_RbIbanGeneratorWebPortlet_INSTANCE_kojb_ibangeneratesbmt"
   And wait 5 secs
+  And check that screen contains "Your iBAN is: SA6730000000608010167519"
+  And wait 5 secs
+  And read value from "Your iBAN is: SA6730000000608010167519" and save it as "iban"
+#  Then check that variable "IbanAccountNumber" is equals to "SA6730000000608010167519"
+  Then check that variable "iban" contains "SA67300000006080101675191"
