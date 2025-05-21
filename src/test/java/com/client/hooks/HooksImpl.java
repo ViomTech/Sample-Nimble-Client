@@ -1,6 +1,5 @@
 package com.client.hooks;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -190,7 +189,8 @@ public class HooksImpl implements ICustomHooks{
 
 	@Override
 	public String setLicenseKey() {
-		return System.getProperty("license.key");
+		return "19D162-47FBA7-4545AE-B77271-310981-87B7D2";
+//		return null;
 	}
 
 }
