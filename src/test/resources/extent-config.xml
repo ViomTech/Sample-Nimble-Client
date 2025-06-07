@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <theme>standard</theme>
+
+        <!-- document encoding -->
+        <encoding>UTF-8</encoding>
+
+        <!-- protocol for script and stylesheets -->
+        <protocol>https</protocol>
+
+        <!-- title of the document -->
+        <documentTitle>Nimble Test Automation Report</documentTitle>
+
+        <!-- report name -->
+        <reportName>Nimble Test Execution Report</reportName>
+
+        <!-- report headline -->
+        <reportHeadline>Nimble Test Automation Results</reportHeadline>
+
+        <!-- global date format override -->
+        <dateFormat>MMM dd, yyyy HH:mm:ss</dateFormat>
+
+        <!-- global time format override -->
+        <timeFormat>HH:mm:ss</timeFormat>
+
+        <!-- PDF configuration -->
+        <pdf>
+            <enable>true</enable>
+            <title>Nimble Test Automation Report</title>
+            <author>Nimble QA Team</author>
+            <subject>Test Execution Results</subject>
+            <keywords>test, automation, nimble</keywords>
+            <pageSize>A4</pageSize>
+            <orientation>portrait</orientation>
+            <margin>
+                <top>20</top>
+                <right>20</right>
+                <bottom>20</bottom>
+                <left>20</left>
+            </margin>
+        </pdf>
+
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+                $(document).ready(function() {
+                    $('.logo-content').html('<img src="https://your-logo-url.png" class="logo" />');
+                });
+            ]]>
+        </scripts>
+
+        <!-- custom styles -->
+        <styles>
+            <![CDATA[
+                .logo-content {
+                    text-align: center;
+                    padding: 20px;
+                }
+                .logo {
+                    max-width: 200px;
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>

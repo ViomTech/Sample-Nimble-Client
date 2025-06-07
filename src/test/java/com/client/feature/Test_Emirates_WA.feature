@@ -1,4 +1,4 @@
-#mvn clean test -Dcucumber.features=src/test/java/com/client/feature -Dcucumber.filter.tags="@Emirates" -Dplatform=web -Dplatform.name=chrome -Durl=https://www.emirates.com/ae/english/
+#mvn clean test -Dcucumber.features=src/test/java/com/client/feature -Dcucumber.filter.tags="@Emirates" -Dplatform=web -Dplatform.name=chrome -Dapp=emirates.com -Durl=https://www.emirates.com/ae/english/ -DflaggedStepThreshold=300 -DflaggedStepMinOccurences=3
 
 Feature: Sample commands
 @Emirates
