@@ -1,11 +1,10 @@
 #mvn clean test -Dcucumber.features=src/test/java/com/client/feature -Dcucumber.filter.tags="@NetsContactUs" -Dplatform=web -Dplatform.name=chrome -Dapp=nets-for-you -Durl=https://www.nets.com.sg/nets/for-you -DflaggedStepThreshold=300 -DflaggedStepMinOccurences=3
 @NetsContactUs
 Feature: Contact Us Feature Testing
-
   Scenario: "Land to contact Us Page"
     When scroll up until screen contains "Contact Us"
     And click "Contact Us"
-    And wait 10 secs
+    And wait 3 secs
     And click "Send us an enquiry" inside button with class "kt-blocks-accordion-header"
 
   Scenario: Validate submission failure, if no data is provided
