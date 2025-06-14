@@ -11,7 +11,7 @@ Feature: GitHub API Demo
 
   Scenario: Fetch my GitHub user details using JWT Token
     When compose a get request to "https://api.github.com/user" with headers
-      | Authorization | Bearer $1 |
+      | Authorization | $1 |
       | Accept        | application/vnd.github+json |
     And execute and save the response as "userProfile"
     And check that response "userProfile" has "200" as status code
@@ -19,7 +19,7 @@ Feature: GitHub API Demo
 
   Scenario: Create a public repo
     When compose a post request to "https://api.github.com/user/repos" with headers
-      | Authorization | Bearer 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 |
+      | Authorization | $1 |
       | Accept        | application/vnd.github+json |
     And with the below JSON request
   """
@@ -35,7 +35,7 @@ Feature: GitHub API Demo
 
   Scenario: Verify GitHub repo exists
     When compose a get request to "https://api.github.com/repos/guptaami-commits/demo-repo" with headers
-      | Authorization | token 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 |
+      | Authorization | $1 |
       | Accept        | application/vnd.github+json |
     And execute and save the response as "repoCheckResponse"
     Then check that response "repoCheckResponse" has "200" as status code
@@ -43,7 +43,7 @@ Feature: GitHub API Demo
 
   Scenario: Delete the repo
     When compose a delete request to "https://api.github.com/repos/guptaami-commits/demo-repo" with headers
-      | Authorization | token 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 |
+      | Authorization | $1 |
       | Accept        | application/vnd.github+json               |
     And execute and save the response as "deleteResponse"
     Then check that response "deleteResponse" has "204" as status code
