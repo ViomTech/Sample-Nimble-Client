@@ -11,7 +11,7 @@ Feature: GitHub API Demo
 
   Scenario: Fetch my GitHub user details using JWT Token
     When compose a get request to "https://api.github.com/user" with headers
-      | Authorization | Bearer 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 |
+      | Authorization | Bearer $1 |
       | Accept        | application/vnd.github+json |
     And execute and save the response as "userProfile"
     And check that response "userProfile" has "200" as status code
