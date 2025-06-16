@@ -1,3 +1,4 @@
+#JAVA_HOME=/opt/homebrew/opt/openjdk@11 mvn clean test -Dcucumber.features=src/test/java/com/client/feature -Dcucumber.filter.tags="@mobiletc" -Dplatform=mobile -Dplatform.name=ios -Dplatform.version=18.3 -Ddevice.name="iPhone 16" -Dapp=ios-settings -DflaggedStepThreshold=300 -DflaggedStepMinOccurences=3 
 Feature: Sample commands
 @mobiletcios
   Scenario: Testing Mobile Settings app

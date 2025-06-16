@@ -97,7 +97,7 @@ public class HooksImpl implements ICustomHooks{
 		DesiredCapabilities _capabilities= new DesiredCapabilities();
 		
 		_capabilities.setCapability("platformName", System.getProperty("platform.name"));
-		_capabilities.setCapability("deviceName", "emulator-5554");
+		_capabilities.setCapability("deviceName", System.getProperty("device.name") );
 		_capabilities.setCapability("platformVersion", System.getProperty("platform.version"));
 		_capabilities.setCapability("noReset", true);
 		_capabilities.setCapability("fullReset", false);
@@ -109,11 +109,12 @@ public class HooksImpl implements ICustomHooks{
 
 			//_capabilities.setCapability("appPackage", "ae.ahb.digital.cit");
 			//_capabilities.setCapability("appActivity", "ae.ahb.digital.appstartup.SplashActivity");
-			_capabilities.setCapability("appPackage", "com.android.settings");
-			_capabilities.setCapability("appActivity", ".Settings");
+			_capabilities.setCapability("appPackage", System.getProperty("app.package"));
+			_capabilities.setCapability("appActivity", System.getProperty("app.activity"));
 			_capabilities.setCapability("automationName", "UiAutomator2");
 			//_capabilities.setCapability("autoGrantPermissions", true);
 			_capabilities.setCapability("autoAcceptAlerts", true);
+			_capabilities.setCapability("appium:forceAppLaunch", true);
 			//_capabilities.setCapability("appium:settings[enableMultiWindows]", true);
 			log.info("Capabilities: " + _capabilities);
 			capabilitiesMap = _capabilities.asMap();
@@ -124,11 +125,11 @@ public class HooksImpl implements ICustomHooks{
 			//File appDir = new File(path);
 			//File appName = new File(appDir, "sampleApp.app");
 			//Build should be present in Resource folder of the directory
-			_capabilities.setCapability("deviceName", "iPhone 15 Pro");
 			//_capabilities.setCapability("platformVersion", "17.4");
 			_capabilities.setCapability("automationName", "XCUITest");
 			//_capabilities.setCapability("app", appName.getAbsolutePath());
 			//_capabilities.setCapability("udid", "5F5DA3D3-3965-4A10-B294-5ED5D659C637");
+//			_capabilities.setCapability("bundleId", "com.apple.Preferences");
 			_capabilities.setCapability("bundleId", "com.apple.Preferences");
 			//_capabilities.setCapability("bundleId", "ae.ahbdigital.cit");
 			log.info("Capabilities: " + _capabilities);
