@@ -1,0 +1,74 @@
+{
+  "stories": [
+    {
+      "title": "Select Value from Dropdown",
+      "description": "As a user, I want to select a value from a dropdown so that I can choose the desired option.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I click the dropdown under 'Select Value', Then a list of options including 'Select Option' should be visible."
+        },
+        {
+          "description": "Given the dropdown is expanded, When I select an option, Then the selected option should be displayed in the 'Select Value' field."
+        }
+      ]
+    },
+    {
+      "title": "Select One from Title Dropdown",
+      "description": "As a user, I want to select a title from the dropdown so that I can confirm my selection.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I click the dropdown under 'Select One', Then a list of options including 'Select Title' should be visible."
+        },
+        {
+          "description": "Given a title is selected, When the dropdown is collapsed, Then the selected title should be shown in the 'Select One' field."
+        }
+      ]
+    },
+    {
+      "title": "Old Style Select Menu Interaction",
+      "description": "As a user, I want to interact with the old style select menu so that I can pick an option.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the select menu is displayed, When I click on it, Then a dropdown with options like 'Red' should be displayed."
+        },
+        {
+          "description": "Given an option is selected, When I view the select menu, Then the chosen option should be visible in the dropdown."
+        }
+      ]
+    },
+    {
+      "title": "Multiselect Dropdown Interaction",
+      "description": "As a user, I want to choose multiple options from a multi-select dropdown so that I can apply multiple selections.",
+      "priority": "High",
+      "effort": "High",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I click the dropdown under 'Multiselect drop down', Then the dropdown should allow multiple selections."
+        },
+        {
+          "description": "Given options are selected, When I collapse the dropdown, Then the selected options should be listed in the 'Multiselect drop down' field."
+        }
+      ]
+    },
+    {
+      "title": "Standard Multi Select Interaction",
+      "description": "As a user, I want to select multiple items from a standard multi-select box so that I can choose various options.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the multi-select box is displayed, When I select options like 'Volvo', 'Saab', Then these options should be highlighted and selectable."
+        },
+        {
+          "description": "Given multiple selections are made, When I review the multi-select list, Then all selected items should remain highlighted."
+        }
+      ]
+    }
+  ]
+}

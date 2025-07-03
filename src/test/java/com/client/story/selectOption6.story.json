@@ -1,0 +1,51 @@
+{
+  "stories": [
+    {
+      "title": "Select a Value from 'Select Value' Dropdown",
+      "description": "As a user, I want to select an option from the 'Select Value' dropdown so that I can choose the appropriate group option.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I view the 'Select Value' field, Then the text 'Group 1, option 2' should be displayed."
+        }
+      ]
+    },
+    {
+      "title": "Select a Title from 'Select One' Dropdown",
+      "description": "As a user, I want to select a title from the 'Select One' dropdown so that I can choose the appropriate title.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I view the 'Select One' field, Then the text 'Mr.' should be displayed."
+        }
+      ]
+    },
+    {
+      "title": "Select a Color from Old Style Select Menu",
+      "description": "As a user, I want to select a color from the 'Old Style Select Menu' so that I can specify my color preference.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I view the 'Old Style Select Menu', Then the text 'Red' should be displayed."
+        }
+      ]
+    },
+    {
+      "title": "Choose Multiple Colors from Multiselect Dropdown",
+      "description": "As a user, I want to select multiple colors from the multiselect dropdown so that I can choose several options.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the multiselect dropdown is clicked, When I view the options, Then options including 'Green', 'Blue', and 'Black' should be visible."
+        },
+        {
+          "description": "Given the dropdown is expanded, When I select 'Green', Then 'Green' should be added to the selected options list."
+        }
+      ]
+    }
+  ]
+}

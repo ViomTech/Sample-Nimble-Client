@@ -1,0 +1,59 @@
+{
+  "stories": [
+    {
+      "title": "Enter Full Name",
+      "description": "As a user, I want to enter my full name so that it is included in my profile information.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the full name input is visible, When I type my full name, Then it should be displayed correctly in the input box."
+        }
+      ]
+    },
+    {
+      "title": "Enter Email Address",
+      "description": "As a user, I want to enter my email address so that I can receive notifications.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the email input is visible, When I type my email in a valid format, Then it should be displayed correctly in the input box."
+        }
+      ]
+    },
+    {
+      "title": "Enter Current Address",
+      "description": "As a user, I want to enter my current address so that my contact information is complete.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the current address textarea is visible, When I enter my current address, Then it should be displayed in the textarea."
+        }
+      ]
+    },
+    {
+      "title": "Enter Permanent Address",
+      "description": "As a user, I want to enter my permanent address so that my contact details are up-to-date.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the permanent address textarea is visible, When I enter my permanent address, Then it should be displayed in the textarea."
+        }
+      ]
+    },
+    {
+      "title": "Fill and Submit Text Box Form",
+      "description": "As a user, I want to fill out the text box form and submit it so that my information is recorded.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given all form fields are visible, When I fill in the fields and click the submit button, Then the information should be submitted successfully."
+        }
+      ]
+    }
+  ]
+}

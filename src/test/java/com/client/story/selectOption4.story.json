@@ -1,0 +1,46 @@
+{
+  "stories": [
+    {
+      "title": "Select a Value from 'Select Value' Dropdown",
+      "description": "As a user, I want to select an option from the 'Select Value' dropdown so that I can choose the appropriate group option.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I click the dropdown next to 'Select Value', Then options including 'Group 1, option 2' should be visible."
+        },
+        {
+          "description": "Given the dropdown is expanded, When I select 'Group 1, option 2', Then this option should be displayed in the 'Select Value' field with the text 'Group 1, option 2'."
+        }
+      ]
+    },
+    {
+      "title": "Select Title from 'Select One' Dropdown",
+      "description": "As a user, I want to select a title from the 'Select One' dropdown so that I can choose the appropriate title.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I click the dropdown next to 'Select One', Then options including 'Dr.', 'Mr.', and 'Mrs.' should be visible under 'PICK ONE TITLE'."
+        },
+        {
+          "description": "Given the dropdown is expanded, When I select 'Dr.', Then this option should be displayed in the 'Select One' field with the text 'Dr.'."
+        }
+      ]
+    },
+    {
+      "title": "Standard Multi Select Functionality",
+      "description": "As a user, I want to select multiple items from the standard multi-select box so that I can choose several options at once.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the multi-select box is visible, When I select 'Volvo' and 'Saab', Then both options should be highlighted in the list."
+        },
+        {
+          "description": "Given multiple selections are made, When I review the multi-select box, Then all selected items such as 'Volvo', 'Saab', and 'Opel' should be displayed together."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "stories": [
+    {
+      "title": "View Registration Form",
+      "description": "As a user, I want to view the registration form so that I can fill in my details.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the form is loaded, When I open the registration page, Then all fields such as First Name, Last Name, Email, Age, Salary, and Department should be visible."
+        }
+      ]
+    },
+    {
+      "title": "Enter First Name",
+      "description": "As a user, I want to enter my first name so that it is included in my profile.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the first name field is visible, When I type my first name, Then it should be displayed in the field."
+        }
+      ]
+    },
+    {
+      "title": "Enter Last Name",
+      "description": "As a user, I want to enter my last name so that it is included in my profile.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the last name field is visible, When I type my last name, Then it should be displayed in the field."
+        }
+      ]
+    },
+    {
+      "title": "Enter Email",
+      "description": "As a user, I want to enter my email address so that I can receive notifications.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the email field is visible, When I type my email in a valid format, Then it should be displayed in the field."
+        }
+      ]
+    },
+    {
+      "title": "Enter Age",
+      "description": "As a user, I want to enter my age so that my profile has complete personal information.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the age field is visible, When I type my age, Then it should be displayed in the field."
+        }
+      ]
+    },
+    {
+      "title": "Enter Salary",
+      "description": "As a user, I want to enter my salary so that my financial information is recorded.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the salary field is visible, When I type my salary, Then it should be displayed in the field."
+        }
+      ]
+    },
+    {
+      "title": "Enter Department",
+      "description": "As a user, I want to enter my department so that my organizational details are complete.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the department field is visible, When I type my department, Then it should be displayed in the field."
+        }
+      ]
+    },
+    {
+      "title": "Submit Registration Form",
+      "description": "As a user, I want to submit the registration form so that my information is recorded.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given all fields are filled, When I click the submit button, Then the form should be submitted successfully."
+        }
+      ]
+    }
+  ]
+}

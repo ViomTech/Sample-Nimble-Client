@@ -1,0 +1,43 @@
+{
+  "stories": [
+    {
+      "title": "Select Option from Dropdown",
+      "description": "As a user, I want to select an option from a dropdown so that I can choose the desired item.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I click the dropdown next to 'Select Value', Then options including 'Group 1, option 1' and 'A root option' should be visible."
+        },
+        {
+          "description": "Given the dropdown is expanded, When I select 'Group 1, option 1', Then this option should be displayed in the 'Select Value' field with the text 'Group 1, option 1'."
+        }
+      ]
+    },
+    {
+      "title": "View Grouped Options in Dropdown",
+      "description": "As a user, I want to view options grouped in the dropdown so that I can easily locate them.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the dropdown is opened, When options are displayed, Then groups 'GROUP 1' and 'GROUP 2' should be clearly labeled and visible."
+        }
+      ]
+    },
+    {
+      "title": "Standard Multi Select Functionality",
+      "description": "As a user, I want to select multiple items from a multi-select box so that I can choose several options at once.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the multi-select box is visible, When I select 'Volvo' and 'Saab', Then both options should be highlighted in the list."
+        },
+        {
+          "description": "Given multiple selections are made, When I review the multi-select box, Then all selected items such as 'Volvo', 'Saab', and 'Opel' should be displayed together."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "stories": [
+    {
+      "title": "View Default Content for 'What' Tab",
+      "description": "As a user, I want to view the default content under the 'What' tab so that I can learn about Lorem Ipsum.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I view the interface, Then the tab with text 'What' should be highlighted by default and content starting with 'Lorem Ipsum is simply dummy text...' should be visible."
+        }
+      ]
+    },
+    {
+      "title": "Interact with 'Origin' Tab",
+      "description": "As a user, I want to click on the 'Origin' tab so that I can view its content.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the default tab is highlighted, When I click on the tab with text 'Origin', Then the content under 'Origin' should be displayed, and the tab should be highlighted."
+        }
+      ]
+    },
+    {
+      "title": "Interact with 'Use' Tab",
+      "description": "As a user, I want to click on the 'Use' tab so that I can view its content.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the default tab is highlighted, When I click on the tab with text 'Use', Then the content under 'Use' should be displayed, and the tab should be highlighted."
+        }
+      ]
+    },
+    {
+      "title": "Interact with 'More' Tab",
+      "description": "As a user, I want to click on the 'More' tab so that I can view its content.",
+      "priority": "Low",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the default tab is highlighted, When I click on the tab with text 'More', Then the content under 'More' should be displayed, and the tab should be highlighted."
+        }
+      ]
+    }
+  ]
+}

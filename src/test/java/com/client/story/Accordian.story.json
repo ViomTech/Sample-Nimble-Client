@@ -1,0 +1,37 @@
+{
+  "stories": [
+    {
+      "title": "Expand Accordion Section",
+      "description": "As a user, I want to expand an accordion section so that I can view the detailed content associated with it.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the accordion is collapsed, When I click on the text 'What is Lorem Ipsum?', Then the content section with the paragraph starting 'It is a long established fact...' should be visible."
+        }
+      ]
+    },
+    {
+      "title": "Collapse Accordion Section",
+      "description": "As a user, I want to collapse an expanded accordion section so that I can hide the detailed content.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given an accordion section is expanded, When I click on the text 'What is Lorem Ipsum?' again, Then the content section should collapse and not be visible."
+        }
+      ]
+    },
+    {
+      "title": "Visibility of Accordion Questions",
+      "description": "As a user, I want all accordion question headings to be visible so that I can choose which content I want to view.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When I view the interface, Then the headings 'What is Lorem Ipsum?', 'Where does it come from?', and 'Why do we use it?' should be visible."
+        }
+      ]
+    }
+  ]
+}

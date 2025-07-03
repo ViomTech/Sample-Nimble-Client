@@ -1,0 +1,48 @@
+{
+  "stories": [
+    {
+      "title": "Expand and Collapse Home Folder",
+      "description": "As a user, I want to expand and collapse the 'Home' folder so that I can navigate its contents.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Home' folder is visible, When I click on its icon, Then it should expand to show 'Desktop', 'Documents', 'Office', and 'Downloads' if collapsed or collapse to hide them if expanded."
+        }
+      ]
+    },
+    {
+      "title": "Select Files in Desktop",
+      "description": "As a user, I want to select files in the 'Desktop' folder so that I can perform actions on 'Notes' and 'Commands'.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Desktop' folder is expanded, When I click the checkbox next to 'Notes' or 'Commands', Then it should be marked as selected."
+        }
+      ]
+    },
+    {
+      "title": "Select Office Files",
+      "description": "As a user, I want to select files in the 'Office' folder so that I can manage 'Public', 'Private', 'Classified', and 'General'.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Office' folder is expanded, When I click the checkbox next to 'Public', 'Private', 'Classified', or 'General', Then it should be marked as selected."
+        }
+      ]
+    },
+    {
+      "title": "Toggle All Folders in Downloads",
+      "description": "As a user, I want to toggle files in the 'Downloads' folder so that I can view 'Word File.doc' and 'Excel File.doc'.",
+      "priority": "Low",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Downloads' folder is expanded, When I click on 'Word File.doc' or 'Excel File.doc', Then the file should be selected."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+    "stories": [
+        {
+            "title": "Double Click Button Interaction",
+            "description": "As a user, I want to double-click the button so that the associated message is displayed.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the 'Double Click Me' button is visible, When I double-click it, Then the message 'You have done a double click' should be displayed."
+                }
+            ]
+        },
+        {
+            "title": "Right Click Button Interaction",
+            "description": "As a user, I want to right-click the button so that the associated message is displayed.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the 'Right Click Me' button is visible, When I right-click it, Then the message 'You have done a right click' should be displayed."
+                }
+            ]
+        },
+        {
+            "title": "Single Click Button Interaction",
+            "description": "As a user, I want to click the button so that the associated message is displayed.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the 'Click Me' button is visible, When I click it, Then the message 'You have done a dynamic click' should be displayed."
+                }
+            ]
+        }
+    ]
+}

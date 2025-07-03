@@ -1,0 +1,124 @@
+    "stories": [
+        {
+            "title": "Enter First Name",
+            "description": "As a student, I want to enter my first name so that it appears on my profile.",
+            "priority": "High",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the first name field, When I enter my first name, Then it should accept and display the text."
+                }
+            ]
+        },
+        {
+            "title": "Enter Last Name",
+            "description": "As a student, I want to enter my last name so that it appears on my profile.",
+            "priority": "High",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the last name field, When I enter my last name, Then it should accept and display the text."
+                }
+            ]
+        },
+        {
+            "title": "Enter Email",
+            "description": "As a student, I want to enter my email address so that I can receive communications.",
+            "priority": "High",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the email field, When I enter my email in a valid format, Then it should accept and display the formatted text."
+                }
+            ]
+        },
+        {
+            "title": "Enter Mobile Number",
+            "description": "As a student, I want to enter my mobile number so that my contact information is complete.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the mobile number field, When I enter a 10-digit number, Then it should accept and display the number."
+                }
+            ]
+        },
+        {
+            "title": "Select Date of Birth",
+            "description": "As a student, I want to select my date of birth so that my age is part of my profile.",
+            "priority": "Medium",
+            "effort": "Medium",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the date of birth field, When I select a date, Then the selected date should be displayed in the format 'DD MMM YYYY'."
+                }
+            ]
+        },
+        {
+            "title": "Select Subjects",
+            "description": "As a student, I want to select my subjects so that they reflect my academic interests.",
+            "priority": "Medium",
+            "effort": "Medium",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the subjects field, When I enter or select my subjects, Then the entered or selected subjects should be displayed."
+                }
+            ]
+        },
+        {
+            "title": "Select Hobbies",
+            "description": "As a student, I want to select my hobbies so that they reflect my personal interests.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the hobbies checkboxes, When I select one or more hobbies, Then the selected options should be marked."
+                }
+            ]
+        },
+        {
+            "title": "Select Gender",
+            "description": "As a student, I want to select my gender so that it reflects my personal identity.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the gender radio options, When I select a gender option, Then it should be marked and selectable only once."
+                }
+            ]
+        },
+        {
+            "title": "Select State and City",
+            "description": "As a student, I want to select my state and city so that my address details are complete.",
+            "priority": "Medium",
+            "effort": "Medium",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the state and city dropdowns, When I select a state, Then I should be able to select a city from the available options."
+                }
+            ]
+        },
+        {
+            "title": "Fill Current Address",
+            "description": "As a student, I want to enter my current address so that it accurately represents my living location.",
+            "priority": "Medium",
+            "effort": "Low",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the current address text area, When I type my address, Then the text should be displayed in the text area."
+                }
+            ]
+        },
+        {
+            "title": "Submit Complete Student Registration Form",
+            "description": "As a student, I want to fill out and submit the registration form so that my information is recorded for registration.",
+            "priority": "High",
+            "effort": "Medium",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the form is filled with valid data, When I click the submit button, Then the form should be submitted successfully."
+                }
+            ]
+        }
+    ]
+}

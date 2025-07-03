@@ -1,0 +1,59 @@
+{
+  "stories": [
+    {
+      "title": "View Employee List",
+      "description": "As a user, I want to view the list of employees so that I can manage their details.",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the employee management page is open, When I view the table, Then it should display employee details including First Name, Last Name, Age, Email, Salary, and Department."
+        }
+      ]
+    },
+    {
+      "title": "Add New Employee",
+      "description": "As a user, I want to add a new employee so that they are included in the records.",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the employee list page is open, When I click the 'Add' button, Then a form should appear to enter new employee details."
+        }
+      ]
+    },
+    {
+      "title": "Search Employees",
+      "description": "As a user, I want to search for an employee so that I can quickly find their information.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the employee list is visible, When I type in the search bar, Then the list should filter to display matching employee records."
+        }
+      ]
+    },
+    {
+      "title": "Edit Employee Details",
+      "description": "As a user, I want to edit an employee's details so that I can update their information.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the employee list is visible, When I click the edit icon next to an employee, Then a form should appear with their current details for editing."
+        }
+      ]
+    },
+    {
+      "title": "Delete Employee Record",
+      "description": "As a user, I want to delete an employee record so that it is removed from the records.",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the employee list is visible, When I click the delete icon next to an employee, Then they should be removed from the list after confirmation."
+        }
+      ]
+    }
+  ]
+}
