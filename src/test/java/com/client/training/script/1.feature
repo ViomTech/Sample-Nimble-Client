@@ -1,4 +1,4 @@
-@tag12
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/accordian
 Feature: Demo QA Feature Testing - Accordian
 
   Scenario: User can view details of one at a time

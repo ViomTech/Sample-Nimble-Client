@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/menu
 Feature: Demo QA Feature Testing -  Menu
   Scenario: Verify Menu and Sub Menu
     And check that screen contains following

@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/webtables
 Feature: Demo QA Feature Testing - WebTable
   Scenario: Display employee data in a tabular format
     And check that screen contains following
