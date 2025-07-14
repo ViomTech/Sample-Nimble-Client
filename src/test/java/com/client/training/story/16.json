@@ -1,0 +1,59 @@
+{
+  "stories": [
+    {
+      "title": "Expand Home Directory",
+      "description": "As a user, I want to expand the 'Home' directory so that I can view its contents",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the UI is loaded, When I click on the expand icon next to 'Home', Then the folders 'Desktop', 'Documents', and 'Downloads' should be visible"
+        }
+      ]
+    },
+    {
+      "title": "Expand Documents Folder",
+      "description": "As a user, I want to expand the 'Documents' folder so that I can view its subdirectories",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Home' directory is expanded, When I click on the expand icon next to 'Documents', Then the 'WorkSpace' and 'Office' folders should be visible"
+        }
+      ]
+    },
+    {
+      "title": "Expand WorkSpace Folder",
+      "description": "As a user, I want to expand the 'WorkSpace' folder so that I can view its contents",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Documents' folder is expanded, When I click on the expand icon next to 'WorkSpace', Then the files 'React', 'Angular', and 'Veu' should be visible"
+        }
+      ]
+    },
+    {
+      "title": "Expand Downloads Folder",
+      "description": "As a user, I want to expand the 'Downloads' folder so that I can view its contents",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Home' directory is expanded, When I click on the expand icon next to 'Downloads', Then the files 'Word File.doc' and 'Excel File.doc' should be visible"
+        }
+      ]
+    },
+    {
+      "title": "Expand Office Folder",
+      "description": "As a user, I want to expand the 'Office' folder so that I can view its contents",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the 'Documents' folder is expanded, When I click on the expand icon next to 'Office', Then the files 'Public', 'Private', 'Classified', and 'General' should be visible"
+        }
+      ]
+    }
+  ]
+}
