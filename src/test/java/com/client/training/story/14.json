@@ -1,0 +1,26 @@
+{
+  "stories": [
+    {
+      "title": "Date Selection in Date Picker",
+      "description": "As a user, I want to select a specific date from the date picker so that I can enter date information accurately",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the date picker is open, When the user clicks on a date in the calendar, Then the input field should display the selected date in 'MM/DD/YYYY' format"
+        }
+      ]
+    },
+    {
+      "title": "Time Slot Selection in Date Picker",
+      "description": "As a user, I want to select a specific time slot from the dropdown so that I can record the time correctly",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the time dropdown is visible, When the user selects a time slot, Then it should display the selected time next to the date in 'HH:MM AM/PM' format"
+        }
+      ]
+    }
+  ]
+}

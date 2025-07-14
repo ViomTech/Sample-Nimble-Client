@@ -1,0 +1,18 @@
+{
+  "stories": [
+    {
+      "title": "Year Selection in Date Picker",
+      "description": "As a user, I want to select a year from the dropdown so that I can navigate to the required year easily",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the date picker is open, When the user clicks on the year dropdown, Then a list of years should be visible"
+        },
+        {
+          "description": "Given the year list is visible, When the user selects a year, Then the date picker should update to display the selected year"
+        }
+      ]
+    }
+  ]
+}
