@@ -21,17 +21,6 @@
           "description": "Given the page is loaded, When I am not hovering over the button, Then the tooltip with the text 'You hovered over the Button' should not be visible."
         }
       ]
-    },
-    {
-      "title": "Ensure UI Elements are Visible",
-      "description": "As a user, I want key UI components like headings to be visible so that I can navigate the interface easily.",
-      "priority": "Low",
-      "effort": "Low",
-      "acceptanceCriteria": [
-        {
-          "description": "Given the page is loaded, When I view the interface, Then a heading with text 'Tool Tips' should be visible above the button."
-        }
-      ]
     }
   ]
 }

@@ -12,20 +12,6 @@
       ]
     },
     {
-      "title": "Display Initial Progress Bar State",
-      "description": "As a user, I want to see the initial state of the progress bar so that I understand its starting point.",
-      "priority": "Medium",
-      "effort": "Low",
-      "acceptanceCriteria": [
-        {
-          "description": "Given the page is loaded, When I view the progress bar, Then it should display the initial state with '0%' progress."
-        },
-        {
-          "description": "Given the page is loaded, When I view the interface, Then a heading with text 'Progress Bar' should be visible above the progress bar."
-        }
-      ]
-    },
-    {
       "title": "Stop Progress Bar",
       "description": "As a user, I want to stop the progress bar so that I can control the progress display.",
       "priority": "Medium",

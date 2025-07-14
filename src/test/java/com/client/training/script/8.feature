@@ -1,4 +1,4 @@
-Feature: Employee Management WebTable
+Feature: Demo QA Feature Testing - WebTable
   Scenario: Display employee data in a tabular format
     And check that screen contains following
       |First Name |

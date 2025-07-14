@@ -1,5 +1,4 @@
-#@demoQA-Textboxes
-Feature: Demo QA Feature Testing
+Feature: Demo QA Feature Testing - TextBox
   Scenario: Enter Full Name
     Given check that screen contains "Full Name" with exact phrase
     When click on the 2nd "Full Name"

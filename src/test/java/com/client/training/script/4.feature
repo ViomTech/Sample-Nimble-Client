@@ -1,5 +1,4 @@
 #JAVA_HOME=/opt/homebrew/opt/openjdk@11;mvn clean test -Dcucumber.features=src/test/java/com/client/feature -Dcucumber.filter.tags="@DemoQA-Buttons" -Dplatform=web -Dplatform.name=chrome -Dapp=DemoQA-Button-Testing -Durl=https://demoqa.com/buttons -DflaggedStepThreshold=500 -DflaggedStepMinOccurences=3
-@DemoQA-Buttons
 Feature: Demo QA Feature Testing - Buttons
   Scenario: User double-clicks the "Double Click Me" button
     Given check that screen contains "Double Click Me"

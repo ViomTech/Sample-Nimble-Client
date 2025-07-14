@@ -1,4 +1,3 @@
-@tag12
 Feature: Demo QA Feature Testing - Checkbox
   Scenario: User can expand or collapse a folder
     And check that screen contains "Home"
