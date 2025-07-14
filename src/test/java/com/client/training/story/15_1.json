@@ -32,17 +32,6 @@
           "description": "Given the default tab is highlighted, When I click on the tab with text 'Use', Then the content under 'Use' should be displayed, and the tab should be highlighted."
         }
       ]
-    },
-    {
-      "title": "Interact with 'More' Tab",
-      "description": "As a user, I want to click on the 'More' tab so that I can view its content.",
-      "priority": "Low",
-      "effort": "Medium",
-      "acceptanceCriteria": [
-        {
-          "description": "Given the default tab is highlighted, When I click on the tab with text 'More', Then the content under 'More' should be displayed, and the tab should be highlighted."
-        }
-      ]
     }
   ]
 }

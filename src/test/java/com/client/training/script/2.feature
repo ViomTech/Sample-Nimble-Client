@@ -1,4 +1,4 @@
-Feature: Demo QA Feature Testing - Accordian
+Feature: Demo QA Feature Testing - AutoComplete
 
   Scenario: Ensure Visibility of UI Elements
     And check that screen contains "Type multiple color names"

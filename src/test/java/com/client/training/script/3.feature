@@ -1,5 +1,4 @@
 #JAVA_HOME=/opt/homebrew/opt/openjdk@11;mvn clean test -Dcucumber.features=src/test/java/com/client/feature -Dcucumber.filter.tags="@AutomationPracticeForm" -Dplatform=web -Dplatform.name=chrome -Dapp=automation-practice-form -Durl=https://demoqa.com/automation-practice-form -DflaggedStepThreshold=500 -DflaggedStepMinOccurences=3
-@AutomationPracticeForm
 Feature: Contact Us Feature Testing
   Scenario: TestAutomationFormSubmission
     When enter "John" into "First Name"
