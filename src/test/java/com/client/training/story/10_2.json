@@ -1,0 +1,35 @@
+{
+  "stories": [
+    {
+      "title": "Date Picker Selection",
+      "description": "As a user, I want to select a specific date from the date picker so that I can update my schedule accordingly",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When the user views the page, Then a label with text 'Select Date' should be visible"
+        },
+        {
+          "description": "Given the date input is visible, When the user clicks on the date input, Then a calendar/date picker UI should be visible"
+        },
+        {
+          "description": "Given the date picker is visible, When the user selects a date from the calendar, Then the input field should display the selected date in 'MM/DD/YYYY' format"
+        }
+      ]
+    },
+    {
+      "title": "Date And Time Display Validation",
+      "description": "As a user, I want to see the current date and time formatted correctly so that I have an accurate reference",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, When the user views the page, Then a label with text 'Date And Time' should be visible"
+        },
+        {
+          "description": "Given the page is loaded, When the user views the date and time input, Then it should display the date in 'Month Day, Year Time' format"
+        }
+      ]
+    }
+  ]
+}

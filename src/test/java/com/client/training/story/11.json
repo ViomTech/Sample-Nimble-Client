@@ -1,33 +1,24 @@
 {
   "stories": [
     {
-      "title": "Date Picker Selection",
-      "description": "As a user, I want to select a specific date from the date picker so that I can update my schedule accordingly",
+      "title": "Hover Over Main Item to Display Sub Items",
+      "description": "As a user, I want to hover over 'Main Item 2' so that I can see its corresponding 'Sub Item'",
       "priority": "High",
-      "effort": "Medium",
+      "effort": "Low",
       "acceptanceCriteria": [
         {
-          "description": "Given the page is loaded, When the user views the page, Then a label with text 'Select Date' should be visible"
-        },
-        {
-          "description": "Given the date input is visible, When the user clicks on the date input, Then a calendar/date picker UI should be visible"
-        },
-        {
-          "description": "Given the date picker is visible, When the user selects a date from the calendar, Then the input field should display the selected date in 'MM/DD/YYYY' format"
+          "description": "Given the Menu is displayed, When I hover over 'Main Item 2', Then 'Sub Item' and 'SUB SUB LIST' should become visible"
         }
       ]
     },
     {
-      "title": "Date And Time Display Validation",
-      "description": "As a user, I want to see the current date and time formatted correctly so that I have an accurate reference",
+      "title": "Hover Over Sub Item to Display Sub Sub Items",
+      "description": "As a user, I want to hover over 'SUB SUB LIST' so that I can see its corresponding 'Sub Sub Item'",
       "priority": "Medium",
       "effort": "Low",
       "acceptanceCriteria": [
         {
-          "description": "Given the page is loaded, When the user views the page, Then a label with text 'Date And Time' should be visible"
-        },
-        {
-          "description": "Given the page is loaded, When the user views the date and time input, Then it should display the date in 'Month Day, Year Time' format"
+          "description": "Given 'Sub Item' is visible, When I hover over 'SUB SUB LIST', Then 'Sub Sub Item 1' and 'Sub Sub Item 2' should become visible"
         }
       ]
     }
