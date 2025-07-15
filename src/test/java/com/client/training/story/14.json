@@ -1,0 +1,66 @@
+{
+  "stories": [
+    {
+      "title": "View Financial Overview",
+      "description": "As a user, I want to view my financial overview so that I can quickly understand my balance and credit status",
+      "priority": "High",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the dashboard page is loaded, Then a section with text 'Financial Overview' should be visible"
+        },
+        {
+          "description": "Given the Financial Overview section is visible, Then 'Total Balance', 'Credit Available', and 'Due Today' with their corresponding amounts should be displayed"
+        },
+        {
+          "description": "Given the 'Total Balance' is displayed, Then an indicator showing percentage change should be visible, reflecting daily or monthly variation"
+        },
+        {
+          "description": "Given 'Total Balance', When the user clicks 'View Statement', Then the statement page should be navigated to"
+        },
+        {
+          "description": "Given 'Credit Available', When the user clicks 'Request Increase', Then a request form or page should be displayed"
+        }
+      ]
+    },
+    {
+      "title": "Make a Payment",
+      "description": "As a user, I want to make a payment so that I can manage my due amounts",
+      "priority": "High",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the dashboard page is loaded, When the user clicks the 'Make Payment' button, Then a payment form should be displayed"
+        }
+      ]
+    },
+    {
+      "title": "View Recent Transactions",
+      "description": "As a user, I want to view my recent transactions so that I can track my spending history",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the dashboard page is loaded, Then a section with text 'Recent Transactions' should be visible"
+        },
+        {
+          "description": "Given the Recent Transactions section is visible, Then columns for 'STATUS', 'DATE', 'DESCRIPTION', 'CATEGORY', and 'AMOUNT' should be present"
+        },
+        {
+          "description": "Given a transaction is listed, When the user views the row, Then appropriate icons and colors for transaction status should be displayed"
+        }
+      ]
+    },
+    {
+      "title": "Add New Account",
+      "description": "As a user, I want to add a new account so that I can manage multiple financial profiles",
+      "priority": "Medium",
+      "effort": "Medium",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the dashboard page is loaded, When the user clicks the 'Add Account' button, Then an account creation form should be displayed"
+        }
+      ]
+    }
+  ]
+}
