@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/checkbox
 Feature: Demo QA Feature Testing - Radio
 
   Scenario: Select Yes option

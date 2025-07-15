@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/auto-complete
 Feature: Demo QA Feature Testing - AutoComplete
 
   Scenario: Ensure Visibility of UI Elements

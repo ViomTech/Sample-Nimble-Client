@@ -1,0 +1,61 @@
+{
+  "stories": [
+    {
+      "title": "Respond to Site Feedback",
+      "description": "As a user, I want to provide feedback on the site so that my opinion can be recorded.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the feedback question 'Do you like the site?' is visible, When I view the options, Then I should see radio buttons for 'Yes', 'Impressive', and 'No'."
+        },
+        {
+          "description": "Given the feedback options are enabled, When I select an option, Then only the selected option should be marked, and the others should be unselected."
+        },
+        {
+          "description": "Given the option 'No' is disabled, When I try to click on it, Then it should not be selectable."
+        }
+      ]
+    },
+    {
+      "title": "Provide Feedback on Site",
+      "description": "As a user, I want to provide feedback on the site so that my opinion is recorded.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the question 'Do you like the site?' is visible, When I view the options, Then I should see radio buttons for 'Yes', 'Impressive', and 'No'."
+        },
+        {
+          "description": "Given the feedback options are enabled, When I select 'Yes', Then it should be marked and the message 'You have selected Yes' should be displayed."
+        },
+        {
+          "description": "Given the feedback options are enabled, When I select 'Impressive', Then it should be marked and previous selections should be unmarked."
+        },
+        {
+          "description": "Given the option 'No' is disabled, When I try to click on it, Then it should not be selectable."
+        }
+      ]
+    },
+    {
+      "title": "Provide Feedback on Site",
+      "description": "As a user, I want to provide feedback on the site so that my opinion is recorded.",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the question 'Do you like the site?' is visible, When I view the options, Then I should see radio buttons for 'Yes', 'Impressive', and 'No'."
+        },
+        {
+          "description": "Given the option 'Yes' is enabled, When I click on it, Then 'Yes' should be marked and the message 'You have selected Yes' should be displayed."
+        },
+        {
+          "description": "Given the option 'Impressive' is enabled, When I click on it, Then 'Impressive' should be marked and the message 'You have selected Impressive' should be displayed."
+        },
+        {
+          "description": "Given the option 'No' is disabled, When I try to click on it, Then it should not be selectable."
+        }
+      ]
+    }
+  ]
+}

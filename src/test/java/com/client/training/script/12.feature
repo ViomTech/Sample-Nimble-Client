@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/select-menu
 Feature: Demo QA Feature Testing -  Select Menu
   Scenario: Verify Select Menu
     And check that screen contains "Select Value"

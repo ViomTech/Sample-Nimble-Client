@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/text-box
 Feature: Demo QA Feature Testing - TextBox
   Scenario: Enter Full Name
     Given check that screen contains "Full Name" with exact phrase

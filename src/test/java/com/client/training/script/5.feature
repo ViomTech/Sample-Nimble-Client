@@ -1,3 +1,4 @@
+#mvn clean test -Dcucumber.features=src/main/test -Dcucumber.filter.tags="@tag1" -Dplatform=web -Dplatform.name=chrome -Durl=https://demoqa.com/checkbox
 Feature: Demo QA Feature Testing - Checkbox
   Scenario: User can expand or collapse a folder
     And check that screen contains "Home"
