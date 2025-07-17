@@ -1,42 +1,13 @@
-//https://webdriveruniversity.com/To-Do-List/index.html
 {
   "stories": [
     {
-      "title": "Add New To-Do Item",
-      "description": "As a user, I want to add a new to-do item so that I can keep track of tasks I need to complete",
+      "title": "Adjust Slider Value",
+      "description": "As a user, I want to adjust a slider so that I can select a specific numerical value.",
       "priority": "High",
       "effort": "Medium",
       "acceptanceCriteria": [
         {
-          "description": "Given a to-do list page is loaded, When the user clicks the '+' button, Then a modal or input field with placeholder 'Enter new to-do' should be visible"
-        },
-        {
-          "description": "Given a modal or input field is open, When a user enters text and submits, Then the new to-do item should appear in the list"
-        }
-      ]
-    },
-    {
-      "title": "Delete To-Do Item",
-      "description": "As a user, I want to delete a to-do item so that I can remove tasks I no longer need to complete",
-      "priority": "Medium",
-      "effort": "Medium",
-      "acceptanceCriteria": [
-        {
-          "description": "Given a to-do list page is loaded, When the user clicks the delete icon next to a to-do item, Then the item should be removed from the list"
-        }
-      ]
-    },
-    {
-      "title": "View To-Do List",
-      "description": "As a user, I want to view my to-do list so that I can see all tasks I need to complete",
-      "priority": "Medium",
-      "effort": "Low",
-      "acceptanceCriteria": [
-        {
-          "description": "Given the to-do list page is loaded, Then a header with text 'TO-DO LIST' should be visible"
-        },
-        {
-          "description": "Given a loaded to-do list, Then each existing to-do item should be visible in the list"
+          "description": "Given the slider is visible, When I drag the slider handle, Then the numerical value next to the slider should update in real-time to reflect the slider's position."
         }
       ]
     }
