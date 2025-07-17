@@ -1,0 +1,28 @@
+//https://the-internet.herokuapp.com/basic_auth
+{
+    "stories": [
+        {
+            "title": "User Sign-In",
+            "description": "As a user, I want to sign in so that I can access the application",
+            "priority": "High",
+            "effort": "Medium",
+            "acceptanceCriteria": [
+                {
+                    "description": "Given the login page is loaded, Then a dialog with text 'Sign in' should be visible"
+                },
+                {
+                    "description": "Given the dialog is visible, Then an input field with label 'Username' should be present and clickable"
+                },
+                {
+                    "description": "Given the dialog is visible, Then an input field with label 'Password' should be present and clickable"
+                },
+                {
+                    "description": "Given the dialog is visible, Then a button with text 'Cancel' should be visible and clickable"
+                },
+                {
+                    "description": "Given the dialog is visible, Then a button with text 'Sign In' should be visible and clickable"
+                }
+            ]
+        }
+    ]
+}
