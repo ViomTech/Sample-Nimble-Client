@@ -1,0 +1,16 @@
+//https://the-internet.herokuapp.com/broken_images
+{
+  "stories": [
+    {
+      "title": "Display Broken Images",
+      "description": "As a user, I want to see broken image indicators so that I can identify missing image content",
+      "priority": "Medium",
+      "effort": "Low",
+      "acceptanceCriteria": [
+        {
+          "description": "Given the page is loaded, Then three image placeholders should be visible and they shouldn't be broken"
+        }
+      ]
+    }
+  ]
+}
