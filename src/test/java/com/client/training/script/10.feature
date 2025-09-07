@@ -5,7 +5,8 @@ Feature: Demo QA Feature Testing - Date-picker
     And click on the element with id as "datePickerMonthYearInput"
     And wait 2 sec
     And click on the element with class "react-datepicker__month-select"
-    And click "{todays-month-in-words}"
+    And print value of "todays-month-in-words"
+    And click "todays-month-in-words"
     And wait 20 sec
     And click "January"
     And click on the element with class "react-datepicker__year-select"
