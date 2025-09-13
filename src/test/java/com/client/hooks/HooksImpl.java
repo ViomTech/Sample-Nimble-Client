@@ -160,7 +160,9 @@ public class HooksImpl implements ICustomHooks{
 			return Platform.WEB;
 		if ("mobile".equalsIgnoreCase(System.getProperty("platform")))
 			return Platform.MOBILE;
-		
+        if ("server".equalsIgnoreCase(System.getProperty("platform")))
+            return Platform.SERVER;
+
 		throw new UnsupportedPlatformException(System.getProperty("platform") + "is not supported.");
 	}
 
